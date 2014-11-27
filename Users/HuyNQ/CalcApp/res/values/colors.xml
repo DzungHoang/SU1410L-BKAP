@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color1">#316796</color>
+    <color name="color1_press">#264f73</color>
+    
+    <color name="color2">#373e44</color>
+    <color name="color2_press">#24292d</color>
+    
+    <color name="color3">#5f6a70</color>
+    <color name="color3_press">#4b5358</color>
+    
+    <color name="color4">#d76502</color>
+    <color name="color4_press">#b55501</color>
+</resources>
