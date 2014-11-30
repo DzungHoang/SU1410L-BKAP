@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/recorder"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="360dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/frame_top" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/frame_upper" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/frame_bottom" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageButton
+                    android:id="@+id/btnLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/left_button" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageButton
+                    android:id="@+id/btnMid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/mid_button" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageButton
+                    android:id="@+id/btnRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/right_button" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
