@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btn_press">#417aa5</color>
+    <color name="btn_press_u">#8dbdd4</color>
+    <color name="btn_normal">#1f3a4d</color>
+    <color name="btn_normal_u">#55759e</color>
+    <color name="btn_border">#06293f</color>
+    <color name="time_frame_border">#1b1b1b</color>
+    <color name="time_frame_bg">#000000</color>
+</resources>
