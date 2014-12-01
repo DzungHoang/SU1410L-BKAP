@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/recorder"
+    android:background="#000000"
     android:gravity="bottom"
     android:orientation="vertical" >
 
@@ -14,7 +14,7 @@
 
     <FrameLayout
         android:layout_width="fill_parent"
-        android:layout_height="70dp" >
+        android:layout_height="80dp" >
 
         <ImageView
             android:id="@+id/imageView2"
@@ -23,11 +23,43 @@
             android:layout_gravity="bottom"
             android:scaleType="fitXY"
             android:src="@drawable/frame_upper" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="-2dp"
+            android:text="00:00:00"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/txtVoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="6dp"
+            android:text="Voice 001"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="60dp"
+            android:src="@drawable/voice_shape_style" />
+
     </FrameLayout>
 
     <FrameLayout
         android:layout_width="fill_parent"
-        android:layout_height="80dp" >
+        android:layout_height="95dp" >
 
         <ImageView
             android:id="@+id/imageView3"
@@ -42,53 +74,58 @@
             android:gravity="center" >
 
             <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="2dp"
                 android:layout_weight="1" >
 
                 <ImageButton
                     android:id="@+id/btnLeft"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@null"
                     android:scaleType="fitXY"
-                    android:src="@drawable/left_button" />
+                    android:src="@drawable/selector_left_btn" />
 
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1" >
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.7" >
 
                 <ImageButton
                     android:id="@+id/btnMid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:layout_gravity="center"
+                    android:layout_marginRight="2dp"
                     android:layout_weight="2"
                     android:background="@null"
                     android:scaleType="fitXY"
-                    android:src="@drawable/mid_button" />
+                    android:src="@drawable/selector_mid_btn" />
 
             </FrameLayout>
 
             <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_weight="1" >
 
                 <ImageButton
                     android:id="@+id/btnRight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="1dp"
                     android:layout_weight="1"
                     android:background="@null"
                     android:scaleType="fitXY"
-                    android:src="@drawable/right_button" />
+                    android:src="@drawable/selector_right_btn" />
 
             </FrameLayout>
 

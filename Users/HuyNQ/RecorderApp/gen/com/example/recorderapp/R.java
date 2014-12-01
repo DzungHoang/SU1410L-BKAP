@@ -1634,6 +1634,10 @@ containing a value of this type.
         public static final int recorder=0x7f02003b;
         public static final int right_button=0x7f02003c;
         public static final int right_button_press=0x7f02003d;
+        public static final int selector_left_btn=0x7f02003e;
+        public static final int selector_mid_btn=0x7f02003f;
+        public static final int selector_right_btn=0x7f020040;
+        public static final int voice_shape_style=0x7f020041;
     }
     public static final class id {
         public static final int action_bar=0x7f090031;
@@ -1652,9 +1656,9 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f090021;
         public static final int always=0x7f090014;
         public static final int beginning=0x7f09001b;
-        public static final int btnLeft=0x7f090042;
-        public static final int btnMid=0x7f090043;
-        public static final int btnRight=0x7f090044;
+        public static final int btnLeft=0x7f090045;
+        public static final int btnMid=0x7f090046;
+        public static final int btnRight=0x7f090047;
         public static final int checkbox=0x7f090029;
         public static final int collapseActionView=0x7f090015;
         public static final int decor_content_parent=0x7f09002f;
@@ -1673,7 +1677,8 @@ containing a value of this type.
         public static final int image=0x7f090023;
         public static final int imageView1=0x7f09003f;
         public static final int imageView2=0x7f090040;
-        public static final int imageView3=0x7f090041;
+        public static final int imageView3=0x7f090044;
+        public static final int imageView4=0x7f090043;
         public static final int listMode=0x7f09000a;
         public static final int list_item=0x7f090025;
         public static final int middle=0x7f09001d;
@@ -1700,7 +1705,9 @@ containing a value of this type.
         public static final int split_action_bar=0x7f090004;
         public static final int submit_area=0x7f09003c;
         public static final int tabMode=0x7f09000c;
+        public static final int textView1=0x7f090041;
         public static final int title=0x7f090027;
+        public static final int txtVoice=0x7f090042;
         public static final int up=0x7f090001;
         public static final int useLogo=0x7f090013;
         public static final int withText=0x7f090018;
