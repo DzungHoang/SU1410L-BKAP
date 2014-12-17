@@ -7,8 +7,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -25,10 +27,10 @@ public class MainActivity extends Activity {
         
         //pouplate data for dataImage
         dataImage = new ArrayList<ImageItem>();
-        dataImage.add(new ImageItem("Blood Seeker",1500,R.drawable.blood_seeker,1200));
-        dataImage.add(new ImageItem("Alechemist",2000,R.drawable.alchemist,800));
-        dataImage.add(new ImageItem("Queen of Pain",1800,R.drawable.queen,5000));
-        dataImage.add(new ImageItem("Shadow Demon",300,R.drawable.shadow_demon,2000));
+        dataImage.add(new ImageItem("Blood Seeker",1500,R.drawable.blood_seeker,1200,false));
+        dataImage.add(new ImageItem("Alechemist",2000,R.drawable.alchemist,800,false));
+        dataImage.add(new ImageItem("Queen of Pain",1800,R.drawable.queen,5000,true));
+        dataImage.add(new ImageItem("Shadow Demon",300,R.drawable.shadow_demon,2000,false));
         
         ListView lstView = (ListView)findViewById(R.id.listView1);
         
@@ -67,6 +69,44 @@ LayoutInflater inflater = (LayoutInflater)getApplicationContext().getSystemServi
     		txtLike.setText(dataImage.get(position).GetLikeCount()+" luot thich");
     		
     		imgView.setImageResource(dataImage.get(position).GetIndexPath());
+    		
+    		//must set to final, so we can use this object in OnClick function
+    		final ImageButton btnLike = (ImageButton)view.findViewById(R.id.btnLike);
+    		
+    		//depend on the status of isLike, in dataImage.get(position), we will decide the image of the btnLike
+    		boolean isLike = dataImage.get(position).GetIsLike();
+    		if(isLike){
+    			btnLike.setImageResource(R.drawable.heart_selected);
+    		}
+    		else{
+    			btnLike.setImageResource(R.drawable.heart);
+    		}
+    		
+    		//must use final, so we can use position inside onClick() function
+    		final int pos = position;
+    		
+    		//add click listener for button like
+    		btnLike.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					//check like status if its true, we set false and vice versa
+					boolean value = dataImage.get(pos).GetIsLike();
+					value = !value;
+					dataImage.get(pos).SetIsLike(value);
+					
+					//update btnLike again
+					
+					if(value==true){
+
+						btnLike.setImageResource(R.drawable.heart_selected);
+					}
+					else{
+						btnLike.setImageResource(R.drawable.heart);
+					}
+	
+				}
+			});
     		
     		return view;
     		

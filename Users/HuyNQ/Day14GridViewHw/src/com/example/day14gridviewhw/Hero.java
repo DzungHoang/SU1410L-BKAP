@@ -5,8 +5,9 @@ public class Hero {
 	int price;
 	int like;
 	int pathIndex;
+	boolean isLike;
 	
-	public Hero(String name, int price, int like, int pathIndex){
+	public Hero(String name, int price, int like, int pathIndex, boolean isLike){
 		this.name = name;
 		this.price = price;
 		this.like = like;
@@ -27,5 +28,13 @@ public class Hero {
 	
 	public int GetPathIndex(){
 		return pathIndex;
+	}
+	
+	public boolean GetIsLike(){
+		return isLike;
+	}
+	
+	public void SetIsLike(boolean value){
+		isLike = value;
 	}
 }
