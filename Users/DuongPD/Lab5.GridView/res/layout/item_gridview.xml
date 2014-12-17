@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02" >
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/chomchom" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="150dp" >
+
+        <LinearLayout 	
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="#40111111"
+            
+            
+            >
+            <TextView
+                android:id="@+id/tvtenqua" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                />
+            <TextView
+                android:id="@+id/tvgiaqua" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="right"
+                />
+        </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+        <ImageView 
+            android:id="@+id/imglike"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/like"
+            android:background="#FFFFFFFF"
+            />
+        <ImageView 
+            android:id="@+id/imgshare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#FFFFFFFF"
+            android:src="@drawable/share"
+            />
+        <TextView 
+            android:id="@+id/tvluotlike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0066"
+            android:layout_gravity="right"
+
+            />
+    </LinearLayout>
+
+</LinearLayout>
