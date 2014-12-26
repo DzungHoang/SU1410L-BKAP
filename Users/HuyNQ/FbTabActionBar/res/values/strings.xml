@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FbTabActionBar</string>
+    <string name="title_section1">News Feed</string>
+    <string name="title_section2">Friend Requests</string>
+    <string name="title_section3">Messages</string>
+    <string name="title_section4">Notifications</string>
+    <string name="title_section5">More</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
