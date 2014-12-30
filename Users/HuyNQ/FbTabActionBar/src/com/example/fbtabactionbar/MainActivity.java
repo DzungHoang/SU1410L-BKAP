@@ -100,7 +100,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         
         //modify content of each tab
         for(int i=0; i< mSectionsPagerAdapter.getCount(); i++){
-        	ImageView imgView = (ImageView)actionBar.getTabAt(i).getCustomView().findViewById(R.id.imageView1);
+        	ImageView imgView = (ImageView)actionBar.getTabAt(i).getCustomView().findViewById(R.id.imgMoreIcon);
         	imgView.setImageResource(lstIcons[i]);
         }
     }
@@ -132,7 +132,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         mViewPager.setCurrentItem(tab.getPosition());
         
         //change image resource of tab view
-        ImageView imgView = (ImageView)(tab.getCustomView().findViewById(R.id.imageView1));
+        ImageView imgView = (ImageView)(tab.getCustomView().findViewById(R.id.imgMoreIcon));
         //Toast.makeText(getApplicationContext(), "index la: "+tab.getPosition(), Toast.LENGTH_SHORT).show();
         imgView.setImageResource(lstIconsSelected[tab.getPosition()]);
         
@@ -161,7 +161,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
     @Override
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
     	//restore image resource of tab view to unselected image
-        ImageView imgView = (ImageView)(tab.getCustomView().findViewById(R.id.imageView1));
+        ImageView imgView = (ImageView)(tab.getCustomView().findViewById(R.id.imgMoreIcon));
         //Toast.makeText(getApplicationContext(), "index la: "+tab.getPosition(), Toast.LENGTH_SHORT).show();
         imgView.setImageResource(lstIcons[tab.getPosition()]);
     }
@@ -184,7 +184,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+
+        		//return PlaceholderFragment.newInstance(position + 1);
+
+        		return FragmentMore.newInstance();
+
         }
 
         @Override
