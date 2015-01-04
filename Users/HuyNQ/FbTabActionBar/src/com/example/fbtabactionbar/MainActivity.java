@@ -101,7 +101,13 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         //modify content of each tab
         for(int i=0; i< mSectionsPagerAdapter.getCount(); i++){
         	ImageView imgView = (ImageView)actionBar.getTabAt(i).getCustomView().findViewById(R.id.imgMoreIcon);
-        	imgView.setImageResource(lstIcons[i]);
+        	
+        	if(i==0){
+        		imgView.setImageResource(lstIconsSelected[i]);
+        	}
+        	else{
+        		imgView.setImageResource(lstIcons[i]);
+        	}
         }
     }
 
@@ -185,9 +191,16 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
 
-        		//return PlaceholderFragment.newInstance(position + 1);
-
+        	if(position==4){
         		return FragmentMore.newInstance();
+        	}
+        	else if(position ==0){
+        		return FragmentFeed.newInstance();
+        	}
+        	else{
+        		return PlaceholderFragment.newInstance(position + 1);
+        	}
+        		
 
         }
 

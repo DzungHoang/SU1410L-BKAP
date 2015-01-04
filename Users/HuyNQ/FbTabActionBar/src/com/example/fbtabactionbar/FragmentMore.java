@@ -90,7 +90,7 @@ public class FragmentMore extends Fragment{
 			
 			Object item = mData.get(position);
 			
-			boolean isCreateNew = false;
+			boolean isCreateNew = true;
 			
 			if(convertView==null){
 				isCreateNew = true;
@@ -104,9 +104,10 @@ public class FragmentMore extends Fragment{
 					isCreateNew = false;
 				}
 				
-				if(item instanceof MoreItemProfile && convertView.getTag() instanceof ViewHolderCat){
+				if(item instanceof MoreItemProfile && convertView.getTag() instanceof ViewHolderProfile){
 					isCreateNew = false;
 				}
+
 			}
 			
 			if(isCreateNew){
@@ -132,7 +133,13 @@ public class FragmentMore extends Fragment{
 					holderProfile.txtContentBig.setText(((MoreItemProfile)item).contentBig);
 					holderProfile.txtContentSmall.setText(((MoreItemProfile)item).contentSmall);
 					holderProfile.imgView.setImageResource(((MoreItemProfile)item).imgPath);
-					holderProfile.txtCount.setText(Integer.toString(((MoreItemProfile)item).count));
+					
+					int count = ((MoreItemProfile)item).count;
+					String strCount="";
+					if(count>0){
+						strCount = Integer.toString(count);
+					}
+					holderProfile.txtCount.setText(strCount);
 				}
 				else if(item instanceof MoreItemNormal){
 					convertView = inflater.inflate(R.layout.layout_more_item_normal, parent, false);
@@ -145,7 +152,13 @@ public class FragmentMore extends Fragment{
 					convertView.setTag(holderNormal);
 					
 					holderNormal.txtContent.setText(((MoreItemNormal)item).content);
-					holderNormal.txtCount.setText(Integer.toString(((MoreItemNormal)item).count));
+					
+					int count = ((MoreItemNormal)item).count;
+					String strCount="";
+					if(count>0){
+						strCount = Integer.toString(count);
+					}				
+					holderNormal.txtCount.setText(strCount);
 					
 					//Log.d("huynq","path la: "+((MoreItemNormal)item).imgPath);
 					
@@ -165,15 +178,27 @@ public class FragmentMore extends Fragment{
 					holderProfile.txtContentBig.setText(((MoreItemProfile)item).contentBig);
 					holderProfile.txtContentSmall.setText(((MoreItemProfile)item).contentSmall);
 					holderProfile.imgView.setImageResource(((MoreItemProfile)item).imgPath);
-					holderProfile.txtCount.setText(Integer.toString(((MoreItemProfile)item).count));
+					
+					int count = ((MoreItemProfile)item).count;
+					String strCount="";
+					if(count>0){
+						strCount = Integer.toString(count);
+					}				
+					holderProfile.txtCount.setText(strCount);
 				}
 				
 				else if(item instanceof MoreItemNormal){
 					holderNormal = (ViewHolderNormal)convertView.getTag();
 					
-					holderNormal.txtContent.setText(((MoreItemNormal)item).content);
-					holderNormal.txtCount.setText(Integer.toString(((MoreItemNormal)item).count));
+					holderNormal.txtContent.setText(((MoreItemNormal)item).content);			
 					holderNormal.imgView.setImageResource(((MoreItemNormal)item).imgPath);
+					
+					int count = ((MoreItemNormal)item).count;
+					String strCount="";
+					if(count>0){
+						strCount = Integer.toString(count);
+					}		
+					holderNormal.txtCount.setText(strCount);
 				}
 			}
 			return convertView;

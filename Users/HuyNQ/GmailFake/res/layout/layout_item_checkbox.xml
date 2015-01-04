@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <RadioButton
+        android:id="@+id/radioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="3"
+        android:paddingLeft="16dp"
+        android:text="RadioButton"
+        android:textColor="#545454"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtCountEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="246"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="14sp" />
+	
+</LinearLayout>

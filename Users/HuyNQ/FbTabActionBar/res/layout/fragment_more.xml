@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/listMore"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-
-</ListView>
+	
+    <com.twotoasters.jazzylistview.JazzyListView
+        android:id="@+id/listMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="4dp"
+        app:effect="cards"
+        app:only_animate_new_items="false"
+        app:only_animate_fling="false"
+        app:max_velocity="0"/>
+    
+</FrameLayout>
