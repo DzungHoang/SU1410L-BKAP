@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="GENERAL">
+	    <CheckBoxPreference android:key="notificationCheck"
+	        android:title="Notifications"
+	        android:summary="Notify me about updates to apps or games that I downloaded"></CheckBoxPreference>
+	    
+	   	<ListPreference     android:title="Auto-update apps"
+                      android:summary="Auto-update apps over Wi-Fi only"
+                      android:key="autoUpdateList"
+                      android:defaultValue="1"
+                      android:entries="@array/listArrayAutoUpdate"
+                      android:entryValues="@array/listValuesAutoUpdate" />
+	   	
+	   	<CheckBoxPreference android:key="iconCheck"
+	        android:title="Add icon to Home screen"
+	        android:summary="For new apps"></CheckBoxPreference>
+	   	
+	   	<Preference
+	   	    android:key="clearPref" 
+	   	    android:title = "Clear local seardch history"
+	   	    android:summary="Remove searches you have performed from this device">
+	   	    
+	   	</Preference>
+	</PreferenceCategory>
+	
+    <PreferenceCategory android:title="User Controls">
+        <ListPreference android:key="filterList"
+            android:title="Content filtering"
+            android:summary="Set the content filtering level to restrict apps that can be downloaded"
+            android:defaultValue="5"
+            android:entries="@array/listArrayFilter"
+            android:entryValues="@array/listValuesFilter">
+        </ListPreference>
+        
+        
+        <ListPreference android:key="authenList"
+            android:title="Require authentication for purchases"
+            android:summary="Every 30 minutes"
+            android:defaultValue="2"
+            android:entries="@array/listArrayAuthen"
+            android:entryValues="@array/listValuesAuthen">
+        </ListPreference>
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="About">
+    	
+    </PreferenceCategory>
+</PreferenceScreen>

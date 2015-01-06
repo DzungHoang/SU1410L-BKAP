@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listArrayAutoUpdate">
+		<item>Do not auto-update apps</item>
+		<item>Auto-update apps at any time. Data charges may apply.</item>
+		<item>Auto-update apps over Wi-Fi only</item>
+	</string-array>
+	<string-array name="listValuesAutoUpdate">
+	    <item>1</item>
+	    <item>2</item>
+	    <item>3</item>
+	</string-array>
+	
+	<string-array name="listArrayFilter">
+	    <item>Everyone</item>
+	    <item>Low maturity</item>
+	    <item>Medium maturity</item>
+	    <item>High maturity</item>
+	    <item>Show all apps</item>
+	</string-array>
+	<string-array name="listValuesFilter">
+	    <item>1</item>
+	    <item>2</item>
+	    <item>3</item>
+	    <item>4</item>
+	    <item>5</item>
+	</string-array>
+	
+	<string-array name="listArrayAuthen">
+		<item>For all purchases through Google Play on this device</item>
+		<item>Every 30 minutes</item>
+		<item>Never</item>
+	</string-array>
+	<string-array name="listValuesAuthen">
+	    <item>1</item>
+	    <item>2</item>
+	    <item>3</item>
+	</string-array>
+</resources>
