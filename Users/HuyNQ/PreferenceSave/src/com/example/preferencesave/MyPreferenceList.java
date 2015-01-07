@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.preference.ListPreference;
 import android.util.AttributeSet;
+import android.widget.Toast;
 
 public class MyPreferenceList extends ListPreference implements OnClickListener{
 
@@ -44,7 +45,15 @@ public class MyPreferenceList extends ListPreference implements OnClickListener{
 
     public  void onClick (DialogInterface dialog, int which)
     {
-        this.setValue(this.getEntryValues()[mClickedDialogEntryIndex]+"");
+    	if(which == DialogInterface.BUTTON_POSITIVE){
+    		this.setValue(this.getEntryValues()[mClickedDialogEntryIndex]+""); 
+    		Toast.makeText(getContext(), "fuck clicked", Toast.LENGTH_SHORT).show();
+    	}
+    	else if(which == DialogInterface.BUTTON_NEGATIVE){
+    		
+    	}
+
     }
+    
 
 }

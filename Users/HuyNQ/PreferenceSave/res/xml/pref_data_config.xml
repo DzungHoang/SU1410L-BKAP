@@ -25,16 +25,16 @@
 	</PreferenceCategory>
 	
     <PreferenceCategory android:title="User Controls">
-        <ListPreference android:key="filterList"
+        <com.example.preferencesave.MyPreferenceList  android:key="filterList"
             android:title="Content filtering"
             android:summary="Set the content filtering level to restrict apps that can be downloaded"
             android:defaultValue="5"
             android:entries="@array/listArrayFilter"
-            android:entryValues="@array/listValuesFilter">
-        </ListPreference>
+            android:entryValues="@array/listValuesFilter"
+            android:positiveButtonText="OK">
+        </com.example.preferencesave.MyPreferenceList>
         
-        
-        <ListPreference android:key="authenList"
+        <ListPreference  android:key="authenList"
             android:title="Require authentication for purchases"
             android:summary="Every 30 minutes"
             android:defaultValue="2"
@@ -44,6 +44,24 @@
     </PreferenceCategory>
     
     <PreferenceCategory android:title="About">
+   	
+        <com.example.preferencesave.MyDialogPreference 
+	   	        android:negativeButtonText="@null"
+	   	        android:positiveButtonText="@null"
+	    	    android:dialogTitle="Open source licenses"
+	    	    android:dialogMessage="Lisense details for open source software"
+	    	    android:key="licensePref" 
+		   	    android:title = "Open source licenses"
+		   	    android:summary="License details for open source software">    
+    	</com.example.preferencesave.MyDialogPreference>
     	
+    	<com.example.preferencesave.MyDialogPreference 
+	   	        android:negativeButtonText="@null"
+	    	    android:dialogTitle="@null"
+	    	    android:dialogMessage="Google Play Store is up to date"
+	    	    android:key="versionDialog" 
+		   	    android:title = "Build version"
+		   	    android:summary="Version: 5.1.11">    
+    	</com.example.preferencesave.MyDialogPreference>  
     </PreferenceCategory>
 </PreferenceScreen>
