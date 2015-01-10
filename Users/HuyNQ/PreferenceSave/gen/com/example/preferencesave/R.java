@@ -1667,6 +1667,7 @@ containing a value of this type.
         public static final int ifRoom=0x7f0a0016;
         public static final int image=0x7f0a0023;
         public static final int listMode=0x7f0a000a;
+        public static final int listView1=0x7f0a003f;
         public static final int list_item=0x7f0a0025;
         public static final int middle=0x7f0a001d;
         public static final int never=0x7f0a0017;
@@ -1693,6 +1694,8 @@ containing a value of this type.
         public static final int submit_area=0x7f0a003c;
         public static final int tabMode=0x7f0a000c;
         public static final int title=0x7f0a0027;
+        public static final int txtItemContent=0x7f0a0041;
+        public static final int txtItemTitle=0x7f0a0040;
         public static final int up=0x7f0a0001;
         public static final int useLogo=0x7f0a0013;
         public static final int withText=0x7f0a0018;
@@ -1748,7 +1751,10 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int activity_main=0x7f030017;
-        public static final int support_simple_spinner_dropdown_item=0x7f030018;
+        public static final int activity_test=0x7f030018;
+        public static final int custom_dialog=0x7f030019;
+        public static final int item_list_dialog=0x7f03001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1809,6 +1815,7 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f0b0004;
         public static final int app_name=0x7f0b0010;
         public static final int hello_world=0x7f0b0011;
+        public static final int title_activity_test=0x7f0b0012;
     }
     public static final class style {
         /** 

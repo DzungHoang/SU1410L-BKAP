@@ -45,15 +45,11 @@
     
     <PreferenceCategory android:title="About">
    	
-        <com.example.preferencesave.MyDialogPreference 
-	   	        android:negativeButtonText="@null"
-	   	        android:positiveButtonText="@null"
-	    	    android:dialogTitle="Open source licenses"
-	    	    android:dialogMessage="Lisense details for open source software"
+        <Preference
 	    	    android:key="licensePref" 
 		   	    android:title = "Open source licenses"
 		   	    android:summary="License details for open source software">    
-    	</com.example.preferencesave.MyDialogPreference>
+    	</Preference>
     	
     	<com.example.preferencesave.MyDialogPreference 
 	   	        android:negativeButtonText="@null"
