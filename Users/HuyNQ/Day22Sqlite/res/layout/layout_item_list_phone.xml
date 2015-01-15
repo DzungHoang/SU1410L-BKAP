@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal" 
+    android:background="@drawable/layer_item_list_phone">
+
+    <TextView
+        android:id="@+id/txtListPhoneName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:text="Iphone 5"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#6D6D6D" />
+
+    <TextView
+        android:id="@+id/txtListQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="120"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#6D6D6D" />
+
+</LinearLayout>
