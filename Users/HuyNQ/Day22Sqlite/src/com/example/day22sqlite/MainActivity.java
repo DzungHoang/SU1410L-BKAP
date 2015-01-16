@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -51,8 +52,9 @@ public class MainActivity extends Activity {
                     int position, long id) {
 
             	Intent myIntent = new Intent(getApplicationContext(), EditActivity.class);
-				myIntent.putExtra("phoneName",mData.get(position).phoneName);
-				myIntent.putExtra("quantity",mData.get(position).quantity+"");
+				myIntent.putExtra(DBController.ID_COL,mData.get(position).id+"");
+				myIntent.putExtra(DBController.NAME_COL,mData.get(position).phoneName);
+				myIntent.putExtra(DBController.QUANTITY_COL,mData.get(position).quantity+"");
 				startActivity(myIntent);
             }
 	  });
@@ -69,11 +71,14 @@ public class MainActivity extends Activity {
     	
     	if(cursor !=null && cursor.moveToFirst()){
     		do{
+    			int id = cursor.getInt(cursor.getColumnIndex(DBController.ID_COL));
     			String name = cursor.getString(cursor.getColumnIndex(DBController.NAME_COL));
     			int quantity = cursor.getInt(cursor.getColumnIndex(DBController.QUANTITY_COL));
     			
-    			PhoneModel phone = new PhoneModel(name, quantity);
+    			PhoneModel phone = new PhoneModel(id, name, quantity);
     			
+    			Log.d("huynq",name+" co so luong: "+quantity); 
+    			   
     			mData.add(phone);
     			
     		}while (cursor.moveToNext());

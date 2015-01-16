@@ -11,12 +11,19 @@
 
     </ListView>
 
-    <Button
-        android:id="@+id/btnNavAddFromListView"
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_weight="1"
-        android:text="Add Phone" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btnNavAddFromListView"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_weight="1"
+            android:text="Add Phone" />
+
+    </FrameLayout>
 
 </LinearLayout>
